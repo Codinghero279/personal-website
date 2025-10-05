@@ -213,6 +213,56 @@ section {
     margin-top: 1.5rem;
 }
 
+/* ===============================
+   SKILLS SECTION (with categories)
+================================= */
+#skills {
+    background: var(--light);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#skills h2 {
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+}
+
+/* Category blocks */
+.skills-category {
+    margin-bottom: 1.75rem;
+}
+
+.skills-category h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+}
+
+/* Skill chips layout */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.skill {
+    background: var(--primary);
+    color: var(--light);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skill:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+}
 
 /* ===============================
    EDUCATION SECTION
@@ -326,6 +376,45 @@ section {
     justify-content: center;
 }
 
+#experience {
+    background: var(--light);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#experience h2 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+}
+
+.experience-item {
+    margin-bottom: 1.75rem;
+}
+
+.experience-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.experience-item .company {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+.experience-item ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.experience-item li {
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+
 /* ==============
    Responsive
    ============== */
@@ -370,4 +459,18 @@ section {
     50% {
         transform: translateY(6px);
     }
+}
+
+/* To fix the auto scroll over shooting issue */
+#about {
+    scroll-margin-top: 250px;
+}
+
+
+#education,
+#projects,
+#experience,
+#contact,
+#skills {
+    scroll-margin-top: 160px;
 }

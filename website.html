@@ -4,6 +4,12 @@
 <head>
     <title>Michael's Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+    </script>
 </head>
 
 <body>
@@ -12,9 +18,10 @@
         <p>Aspiring Computer Engineer</p>
         <nav>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -45,6 +52,54 @@
             </div>
         </section>
 
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-container">
+                    <span class="skill">C / C++</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Verilog</span>
+                    <span class="skill">MATLAB</span>
+                    <span class="skill">RISC V Assembly</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Web Technologies</h3>
+                <div class="skills-container">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">React</span>
+                    <span class="skill">Node.js</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Tools & Frameworks</h3>
+                <div class="skills-container">
+                    <span class="skill">Git & GitHub</span>
+                    <span class="skill">PyCharm</span>
+                    <span class="skill">VS Code</span>
+                    <span class="skill">Quartus Prime</span>
+                    <span class="skill">Linux</span>
+                    <span class="skill">LTspice</span>
+                    <span class="skill">Zephyr</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Soft Skills</h3>
+                <div class="skills-container">
+                    <span class="skill">Teamwork</span>
+                    <span class="skill">Problem Solving</span>
+                    <span class="skill">Communication</span>
+                    <span class="skill">Time Management</span>
+                    <span class="skill">Critical Thinking</span>
+                </div>
+            </div>
+        </section>
 
         <section id="education">
             <h2>Education</h2>
@@ -64,11 +119,57 @@
 
             <div class="education-item">
                 <h3>Alexander Mackenzie High School</h3>
+                <p class="degree"><strong>International Baccalaureate and High School Diploma</strong></p>
                 <p class="date">Sept 2019 - June 2023</p>
                 <ul>
                     <li>Ontario Scholar Award (2023)</li>
                     <li>4.0 / 4.0 GPA</li>
                     <li>Alexander Mackenzie H.S Academic Award for IB Physics SL, 2022</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <h3>Firmware Team Member</h3>
+                <p class="company">U of T Aerospace Team, Space Systems • May 2025 - Present</p>
+                <ul>
+                    <li>Develop and Test Firmware Using <strong>C</strong> in <strong>Zephyr RTOS</strong> for our
+                        <strong>FINCH</strong> mission <strong>Cube Satellite</strong>
+                    </li>
+                    <li>Use <strong>Zephyr Drivers</strong> for our Heater and Real-Time Clock Systems</li>
+                    <li>Tested <strong>CAN</strong> bus Driver on the <strong>Oscilloscope</strong> for Communication
+                        Between our Two On-Board PCBs</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>AI Trainer</h3>
+                <p class="company">Outlier AI • Mar 2025 - Sept 2025</p>
+                <ul>
+                    <li><strong>Reviewed and Provided Quality Feedback on Machine-Generated Responses</strong>, Helping
+                        Raise model
+                        Precision/Recall Scores with <strong>90% accuracy</strong> Through Consistent Application of
+                        Evaluation Guidelines.</li>
+                    <li><strong>Generated and Curated High-Quality Training Prompts</strong> Across Diverse Domains,
+                        Contributing to a
+                        <strong>20% Increase in Model Response Relevance</strong> During A/B Testing
+                    </li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Creative Director</h3>
+                <p class="company">University of Toronto • Jan 2024 - Apr 2024 </p>
+                <ul>
+                    <li>Developed a <strong>Functional, Non-Intrusive Medical Device Prototype</strong>, Resulting in
+                        <strong>98% Data
+                            Tracking Accuracy</strong>, Ensuring Better Diagnoses of Sleep Disorders
+                    </li>
+                    <li><strong>Led Creative Decisions</strong> of The Team Regarding Many Elements of the Project</li>
+                    <li>The Prototype <strong>Budget was Kept Under $100</strong></li>
                 </ul>
             </div>
         </section>
@@ -150,14 +251,6 @@
                 </div>
 
             </div>
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Internship</strong> – Company XYZ – Summer 2024</li>
-                <li><strong>Personal Projects</strong> – Building various web projects</li>
-            </ul>
         </section>
 
         <section id="contact">
