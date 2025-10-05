@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-    color: --background;
+    color: var(--light);
     margin-top: 1rem;
     margin-bottom: 0.25rem;
 }
@@ -112,6 +112,54 @@ section {
     transform: translateY(-3px);
 }
 
+/* ===============================
+   BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--light);
+    background: var(--primary);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover/active states */
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Active click animation */
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============
+   Main Button
+   ============== */
+
+/* Color variations */
+.btn-primary {
+    background: var(--primary);
+}
+
+.btn-secondary {
+    background: #7f8c8d;
+}
+
+.btn-secondary:hover {
+    background: #636e72;
+}
+
 /* ==============
    Contact Links
    ============== */
@@ -122,6 +170,160 @@ section {
 
 #contact a:hover {
     color: var(--primary-dark);
+}
+
+/* ===============================
+   ABOUT SECTION IMPROVEMENTS
+================================= */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* stack content vertically */
+    text-align: center;
+    /* center text horizontally */
+    padding: 2rem 2rem;
+    /* generous vertical + horizontal spacing */
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#about .about-content {
+    max-width: 800px;
+    /* keeps text from stretching too wide */
+}
+
+#about h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-dark);
+}
+
+#about p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Center and style the button */
+#about .btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
+
+/* ===============================
+   EDUCATION SECTION
+================================= */
+#education {
+    background: var(--light);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#education h2 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+}
+
+.education-item {
+    margin-bottom: 1.75rem;
+}
+
+.education-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.education-item .degree {
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+.education-item .date {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+}
+
+.education-item ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.education-item li {
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+
+
+/* ===============================
+   PROJECTS SECTION
+================================= */
+#projects {
+    background: var(--light);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#projects h2 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+}
+
+/* grid layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* project card styling */
+.project-card {
+    opacity: 0;
+    background: #fafafa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(25px);
+    transition: opacity 0.6s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* link area inside each card */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
 }
 
 /* ==============
@@ -137,5 +339,35 @@ section {
     nav a {
         display: block;
         margin: 0;
+    }
+}
+
+/* ===============================
+   SCROLL INDICATOR
+================================= */
+.scroll-down {
+    margin-top: 2rem;
+    font-size: 2rem;
+    /* size of the arrow */
+    color: var(--primary);
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.scroll-down:hover {
+    color: var(--primary-dark);
+    transform: translateY(3px);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
     }
 }

@@ -11,7 +11,8 @@
         <h1>Michael Lander</h1>
         <p>Aspiring Computer Engineer</p>
         <nav>
-            <a href="#about" class="active">About</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
@@ -20,20 +21,134 @@
 
     <main>
         <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! I'm learning how to build websites. This is my first HTML page.</p>
-            <p>I’m passionate about coding and aerospace technology 🚀</p>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm Michael Lander, a third-year <strong>Computer Engineering student</strong>
+                    at the <strong>University of Toronto</strong>.
+                    I'm passionate about exploring both the <strong>software</strong> and
+                    <strong>hardware</strong> sides of computer engineering — from building
+                    intuitive web applications to working with systems that power modern technology.
+                </p>
+                <p>
+                    I'm always excited to learn new skills, take on challenges, and work on projects
+                    that bring together creativity and engineering. My goal is to grow into a versatile
+                    developer who bridges the gap between hardware and software.
+                </p>
+
+                <p>
+                    Feel free to begin exploring my website with the arrow below or just download my resume below!
+                </p>
+
+                <a href="Michael Lander Resume.pdf" class="btn btn-primary" download>Download Resume</a>
+                <div class="scroll-down">↓</div>
+            </div>
+        </section>
+
+
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <h3>University of Toronto</h3>
+                <p class="degree"><strong>BASc in Computer Engineering</strong></p>
+                <p class="date">Sept 2023 - May 2027 (Expected) + PEY</p>
+                <ul>
+                    <li>Minor: Artifical Intelligence</li>
+                    <li>Edward S Rogers Sr. Admission Scholarship</li>
+                    <li>Faculty Of Applied Science And Engineering Admission Scholarship</li>
+                    <li>Relevant Coursework: Data Structures & Algorithms, Software Design, Computer Networks, Signals
+                        and Systems, Digital Electronics</li>
+                </ul>
+            </div>
+
+            <div class="education-item">
+                <h3>Alexander Mackenzie High School</h3>
+                <p class="date">Sept 2019 - June 2023</p>
+                <ul>
+                    <li>Ontario Scholar Award (2023)</li>
+                    <li>4.0 / 4.0 GPA</li>
+                    <li>Alexander Mackenzie H.S Academic Award for IB Physics SL, 2022</li>
+                </ul>
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="card">
-                <h3>Portfolio Website</h3>
-                <p>This website itself is a showcase of my HTML and CSS skills.</p>
-            </div>
-            <div class="card">
-                <h3>Other Project</h3>
-                <p>Placeholder for another project...</p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Personal Website</h3>
+                    <p>This website itself is a showcase of my <strong>HTML</strong>, <strong>CSS</strong>, and
+                        <strong>JavaScript</strong> skills.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Codinghero279/personal-website" target="_blank"
+                            class="btn btn-secondary">View Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Travel Tracking Website</h3>
+                    <p>A simple website where anybody can track their travels to other countries and see interesting
+                        statistics. Made using <strong>HTML</strong>, <strong>CSS</strong>, and
+                        <strong>JavaScript</strong>
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Codinghero279/travel-tracker" target="_blank"
+                            class="btn btn-secondary">View Code</a>
+                        <a href="https://codinghero279.github.io/travel-tracker" target="_blank"
+                            class="btn btn-primary">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>FPGA Memory Game</h3>
+                    <p>Designed an interactive pathway memory game using <strong>C</strong> and <strong>RISC V
+                            Assembly</strong>
+                        on a <strong>De1-SoC</strong> board
+                        as part of a university course project. Full <strong>VGA</strong> and <strong>audio</strong>
+                        output.</p>
+
+                    <p>Unfortunately I do not have the link to the repository at this time</p>
+                    <div class="project-links">
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>FPGA Brick Breaker Game</h3>
+                    <p>Designed a brick breaker game with an interactable paddle on a <strong>De1-SoC</strong> board
+                        using <strong>Verilog HDL</strong> and <strong>C</strong>
+                        as part of a university course project.</p>
+
+                    <p>Unfortunately I do not have the link to the repository at this time</p>
+                    <div class="project-links">
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Mapping Software</h3>
+                    <p>Developed Customizable, Interactive Mapping Software using <strong>C++</strong>as part of a
+                        university course project.</p>
+                    <p>Uses <strong>OSM Data</strong> and is <strong>Multithreaded</strong> for up to
+                        <strong>4x</strong> performence when applicable
+                    </p>
+                    <p>Unfortunately I cannot show the code due to <strong>Copyright</strong></p>
+                    <div class="project-links">
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Future Projects Yet to Come!</h3>
+                    <p>I'm always working on new projects and will add them here once they are developed!</p>
+                    <div class="project-links">
+
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -56,6 +171,8 @@
     <footer>
         <p>Thanks for visiting my website!</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
