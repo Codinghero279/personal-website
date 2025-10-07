@@ -48,3 +48,9 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 cards.forEach(card => observer.observe(card));
+
+// === Dynamic current year in footer ===
+const yearSpan = document.querySelector("#year");
+if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+}
